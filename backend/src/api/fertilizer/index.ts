@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/fertilizer`,
+    require('./fertilizerCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/fertilizer/:id`,
+    require('./fertilizerUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/fertilizer/import`,
+    require('./fertilizerImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/fertilizer`,
+    require('./fertilizerDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/fertilizer/autocomplete`,
+    require('./fertilizerAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/fertilizer`,
+    require('./fertilizerList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/fertilizer/:id`,
+    require('./fertilizerFind').default,
+  );
+};

@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/agent`,
+    require('./agentCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/agent/:id`,
+    require('./agentUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/agent/import`,
+    require('./agentImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/agent`,
+    require('./agentDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/agent/autocomplete`,
+    require('./agentAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/agent`,
+    require('./agentList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/agent/:id`,
+    require('./agentFind').default,
+  );
+};

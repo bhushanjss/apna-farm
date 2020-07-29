@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/rainwater`,
+    require('./rainwaterCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/rainwater/:id`,
+    require('./rainwaterUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/rainwater/import`,
+    require('./rainwaterImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/rainwater`,
+    require('./rainwaterDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/rainwater/autocomplete`,
+    require('./rainwaterAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/rainwater`,
+    require('./rainwaterList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/rainwater/:id`,
+    require('./rainwaterFind').default,
+  );
+};

@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/pest`,
+    require('./pestCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/pest/:id`,
+    require('./pestUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/pest/import`,
+    require('./pestImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/pest`,
+    require('./pestDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/pest/autocomplete`,
+    require('./pestAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/pest`,
+    require('./pestList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/pest/:id`,
+    require('./pestFind').default,
+  );
+};

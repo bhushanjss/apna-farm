@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/pesticide`,
+    require('./pesticideCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/pesticide/:id`,
+    require('./pesticideUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/pesticide/import`,
+    require('./pesticideImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/pesticide`,
+    require('./pesticideDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/pesticide/autocomplete`,
+    require('./pesticideAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/pesticide`,
+    require('./pesticideList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/pesticide/:id`,
+    require('./pesticideFind').default,
+  );
+};

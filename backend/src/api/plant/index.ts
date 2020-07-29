@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/plant`,
+    require('./plantCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/plant/:id`,
+    require('./plantUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/plant/import`,
+    require('./plantImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/plant`,
+    require('./plantDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/plant/autocomplete`,
+    require('./plantAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/plant`,
+    require('./plantList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/plant/:id`,
+    require('./plantFind').default,
+  );
+};

@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/irrigation`,
+    require('./irrigationCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/irrigation/:id`,
+    require('./irrigationUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/irrigation/import`,
+    require('./irrigationImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/irrigation`,
+    require('./irrigationDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/irrigation/autocomplete`,
+    require('./irrigationAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/irrigation`,
+    require('./irrigationList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/irrigation/:id`,
+    require('./irrigationFind').default,
+  );
+};

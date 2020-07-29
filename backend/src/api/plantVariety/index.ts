@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/plant-variety`,
+    require('./plantVarietyCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/plant-variety/:id`,
+    require('./plantVarietyUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/plant-variety/import`,
+    require('./plantVarietyImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/plant-variety`,
+    require('./plantVarietyDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/plant-variety/autocomplete`,
+    require('./plantVarietyAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/plant-variety`,
+    require('./plantVarietyList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/plant-variety/:id`,
+    require('./plantVarietyFind').default,
+  );
+};

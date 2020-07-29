@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/herbicide`,
+    require('./herbicideCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/herbicide/:id`,
+    require('./herbicideUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/herbicide/import`,
+    require('./herbicideImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/herbicide`,
+    require('./herbicideDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/herbicide/autocomplete`,
+    require('./herbicideAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/herbicide`,
+    require('./herbicideList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/herbicide/:id`,
+    require('./herbicideFind').default,
+  );
+};

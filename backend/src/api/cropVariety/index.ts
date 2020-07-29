@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/crop-variety`,
+    require('./cropVarietyCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/crop-variety/:id`,
+    require('./cropVarietyUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/crop-variety/import`,
+    require('./cropVarietyImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/crop-variety`,
+    require('./cropVarietyDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/crop-variety/autocomplete`,
+    require('./cropVarietyAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/crop-variety`,
+    require('./cropVarietyList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/crop-variety/:id`,
+    require('./cropVarietyFind').default,
+  );
+};

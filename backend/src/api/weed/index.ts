@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/weed`,
+    require('./weedCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/weed/:id`,
+    require('./weedUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/weed/import`,
+    require('./weedImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/weed`,
+    require('./weedDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/weed/autocomplete`,
+    require('./weedAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/weed`,
+    require('./weedList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/weed/:id`,
+    require('./weedFind').default,
+  );
+};

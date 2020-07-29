@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/disease`,
+    require('./diseaseCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/disease/:id`,
+    require('./diseaseUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/disease/import`,
+    require('./diseaseImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/disease`,
+    require('./diseaseDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/disease/autocomplete`,
+    require('./diseaseAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/disease`,
+    require('./diseaseList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/disease/:id`,
+    require('./diseaseFind').default,
+  );
+};

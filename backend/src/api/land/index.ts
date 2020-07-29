@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/land`,
+    require('./landCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/land/:id`,
+    require('./landUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/land/import`,
+    require('./landImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/land`,
+    require('./landDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/land/autocomplete`,
+    require('./landAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/land`,
+    require('./landList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/land/:id`,
+    require('./landFind').default,
+  );
+};

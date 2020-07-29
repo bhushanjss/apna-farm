@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/harvest`,
+    require('./harvestCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/harvest/:id`,
+    require('./harvestUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/harvest/import`,
+    require('./harvestImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/harvest`,
+    require('./harvestDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/harvest/autocomplete`,
+    require('./harvestAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/harvest`,
+    require('./harvestList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/harvest/:id`,
+    require('./harvestFind').default,
+  );
+};

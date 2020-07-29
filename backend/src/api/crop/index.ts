@@ -1,0 +1,30 @@
+export default (app) => {
+  app.post(
+    `/tenant/:tenantId/crop`,
+    require('./cropCreate').default,
+  );
+  app.put(
+    `/tenant/:tenantId/crop/:id`,
+    require('./cropUpdate').default,
+  );
+  app.post(
+    `/tenant/:tenantId/crop/import`,
+    require('./cropImport').default,
+  );
+  app.delete(
+    `/tenant/:tenantId/crop`,
+    require('./cropDestroy').default,
+  );
+  app.get(
+    `/tenant/:tenantId/crop/autocomplete`,
+    require('./cropAutocomplete').default,
+  );
+  app.get(
+    `/tenant/:tenantId/crop`,
+    require('./cropList').default,
+  );
+  app.get(
+    `/tenant/:tenantId/crop/:id`,
+    require('./cropFind').default,
+  );
+};
