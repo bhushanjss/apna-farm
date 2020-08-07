@@ -1587,9 +1587,9 @@ const en = {
       label: 'Admin',
       description: 'Full access to all resources',
     },
-    custom: {
-      label: 'Custom Role',
-      description: 'Custom role access',
+    farmer: {
+      label: 'Farmer',
+      description: 'Farmer role access',
     },
   },
 
