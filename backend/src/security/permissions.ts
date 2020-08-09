@@ -92,7 +92,7 @@ class Permissions {
       },
       userAutocomplete: {
         id: 'userAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer,, roles.agent, roles.researcher],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [
           plans.free,
           plans.growth,
