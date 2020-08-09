@@ -6,6 +6,9 @@ class Roles {
     return {
       admin: 'admin',
       farmer: 'farmer',
+      agent: 'agent',
+      researcher: 'researcher',
+
     };
   }
 }

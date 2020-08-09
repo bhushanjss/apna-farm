@@ -92,7 +92,7 @@ class Permissions {
       },
       userAutocomplete: {
         id: 'userAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer,, roles.agent, roles.researcher],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -152,12 +152,12 @@ class Permissions {
       },
       personRead: {
         id: 'personRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       personAutocomplete: {
         id: 'personAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -192,12 +192,12 @@ class Permissions {
       },
       locationRead: {
         id: 'locationRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       locationAutocomplete: {
         id: 'locationAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -232,12 +232,12 @@ class Permissions {
       },
       landRead: {
         id: 'landRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       landAutocomplete: {
         id: 'landAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -272,12 +272,12 @@ class Permissions {
       },
       farmerRead: {
         id: 'farmerRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       farmerAutocomplete: {
         id: 'farmerAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -312,12 +312,12 @@ class Permissions {
       },
       agentRead: {
         id: 'agentRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       agentAutocomplete: {
         id: 'agentAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -352,12 +352,12 @@ class Permissions {
       },
       questionRead: {
         id: 'questionRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       questionAutocomplete: {
         id: 'questionAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -392,12 +392,12 @@ class Permissions {
       },
       answerRead: {
         id: 'answerRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       answerAutocomplete: {
         id: 'answerAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -432,12 +432,12 @@ class Permissions {
       },
       cropRead: {
         id: 'cropRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       cropAutocomplete: {
         id: 'cropAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -472,12 +472,12 @@ class Permissions {
       },
       cropVarietyRead: {
         id: 'cropVarietyRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       cropVarietyAutocomplete: {
         id: 'cropVarietyAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -512,12 +512,12 @@ class Permissions {
       },
       plantRead: {
         id: 'plantRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       plantAutocomplete: {
         id: 'plantAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -552,12 +552,12 @@ class Permissions {
       },
       plantVarietyRead: {
         id: 'plantVarietyRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       plantVarietyAutocomplete: {
         id: 'plantVarietyAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -592,12 +592,12 @@ class Permissions {
       },
       farmingMethodRead: {
         id: 'farmingMethodRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       farmingMethodAutocomplete: {
         id: 'farmingMethodAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -632,12 +632,12 @@ class Permissions {
       },
       farmingRead: {
         id: 'farmingRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       farmingAutocomplete: {
         id: 'farmingAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -672,12 +672,12 @@ class Permissions {
       },
       irrigationRead: {
         id: 'irrigationRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       irrigationAutocomplete: {
         id: 'irrigationAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -712,12 +712,12 @@ class Permissions {
       },
       weedRead: {
         id: 'weedRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       weedAutocomplete: {
         id: 'weedAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -752,12 +752,12 @@ class Permissions {
       },
       herbicideRead: {
         id: 'herbicideRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       herbicideAutocomplete: {
         id: 'herbicideAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -792,12 +792,12 @@ class Permissions {
       },
       insectRead: {
         id: 'insectRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       insectAutocomplete: {
         id: 'insectAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -832,12 +832,12 @@ class Permissions {
       },
       insecticideRead: {
         id: 'insecticideRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       insecticideAutocomplete: {
         id: 'insecticideAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -872,12 +872,12 @@ class Permissions {
       },
       pestRead: {
         id: 'pestRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       pestAutocomplete: {
         id: 'pestAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -912,12 +912,12 @@ class Permissions {
       },
       pesticideRead: {
         id: 'pesticideRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       pesticideAutocomplete: {
         id: 'pesticideAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -952,12 +952,12 @@ class Permissions {
       },
       soilRead: {
         id: 'soilRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       soilAutocomplete: {
         id: 'soilAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -992,12 +992,12 @@ class Permissions {
       },
       diseaseRead: {
         id: 'diseaseRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       diseaseAutocomplete: {
         id: 'diseaseAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -1032,12 +1032,12 @@ class Permissions {
       },
       fertilizerRead: {
         id: 'fertilizerRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       fertilizerAutocomplete: {
         id: 'fertilizerAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -1072,12 +1072,12 @@ class Permissions {
       },
       organicFertilizerRead: {
         id: 'organicFertilizerRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       organicFertilizerAutocomplete: {
         id: 'organicFertilizerAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -1112,12 +1112,12 @@ class Permissions {
       },
       harvestRead: {
         id: 'harvestRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       harvestAutocomplete: {
         id: 'harvestAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
@@ -1152,12 +1152,12 @@ class Permissions {
       },
       rainwaterRead: {
         id: 'rainwaterRead',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       rainwaterAutocomplete: {
         id: 'rainwaterAutocomplete',
-        allowedRoles: [roles.admin, roles.farmer],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },      
     };
