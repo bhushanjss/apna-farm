@@ -7,10 +7,12 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "env": { "NODE_ENV": "localhost" },
-      "program": "${workspaceFolder}/src/server.ts",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
-    }
+      "name": "Apna Farm Backend",
+      "envFile": "${workspaceFolder}/backend/.env",
+      "skipFiles": [
+          "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/backend/src/server.ts"
+  }
   ]
 }
