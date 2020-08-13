@@ -1591,6 +1591,14 @@ const en = {
       label: 'Farmer',
       description: 'Farmer role access',
     },
+    agent: {
+      label: 'Agent',
+      description: 'Farmer role access',
+    },
+    researcher: {
+      label: 'Researcher',
+      description: 'Farmer role access',
+    },
   },
 
   user: {
