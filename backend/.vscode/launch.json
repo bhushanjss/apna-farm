@@ -9,9 +9,7 @@
       "request": "launch",
       "name": "Apna Farm Backend",
       "envFile": "${workspaceFolder}/backend/.env",
-      "skipFiles": [
-          "<node_internals>/**"
-      ],
+      "skipFiles": ["<node_internals>/***],
       "program": "${workspaceFolder}/backend/src/server.ts"
   }
   ]
