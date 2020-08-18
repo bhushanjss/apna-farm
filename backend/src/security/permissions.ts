@@ -163,12 +163,12 @@ class Permissions {
 
       locationImport: {
         id: 'locationImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       locationCreate: {
         id: 'locationCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -176,7 +176,7 @@ class Permissions {
       },
       locationEdit: {
         id: 'locationEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -203,12 +203,12 @@ class Permissions {
 
       landImport: {
         id: 'landImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       landCreate: {
         id: 'landCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -216,7 +216,7 @@ class Permissions {
       },
       landEdit: {
         id: 'landEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -243,12 +243,12 @@ class Permissions {
 
       farmerImport: {
         id: 'farmerImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       farmerCreate: {
         id: 'farmerCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -256,7 +256,7 @@ class Permissions {
       },
       farmerEdit: {
         id: 'farmerEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -323,12 +323,12 @@ class Permissions {
 
       questionImport: {
         id: 'questionImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       questionCreate: {
         id: 'questionCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -336,7 +336,7 @@ class Permissions {
       },
       questionEdit: {
         id: 'questionEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -363,12 +363,12 @@ class Permissions {
 
       answerImport: {
         id: 'answerImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       answerCreate: {
         id: 'answerCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -376,7 +376,7 @@ class Permissions {
       },
       answerEdit: {
         id: 'answerEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -403,12 +403,12 @@ class Permissions {
 
       cropImport: {
         id: 'cropImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       cropCreate: {
         id: 'cropCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -416,7 +416,7 @@ class Permissions {
       },
       cropEdit: {
         id: 'cropEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -443,12 +443,12 @@ class Permissions {
 
       cropVarietyImport: {
         id: 'cropVarietyImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       cropVarietyCreate: {
         id: 'cropVarietyCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -456,7 +456,7 @@ class Permissions {
       },
       cropVarietyEdit: {
         id: 'cropVarietyEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -483,12 +483,12 @@ class Permissions {
 
       plantImport: {
         id: 'plantImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       plantCreate: {
         id: 'plantCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -496,7 +496,7 @@ class Permissions {
       },
       plantEdit: {
         id: 'plantEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -523,12 +523,12 @@ class Permissions {
 
       plantVarietyImport: {
         id: 'plantVarietyImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       plantVarietyCreate: {
         id: 'plantVarietyCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -536,7 +536,7 @@ class Permissions {
       },
       plantVarietyEdit: {
         id: 'plantVarietyEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -563,12 +563,12 @@ class Permissions {
 
       farmingMethodImport: {
         id: 'farmingMethodImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       farmingMethodCreate: {
         id: 'farmingMethodCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -576,7 +576,7 @@ class Permissions {
       },
       farmingMethodEdit: {
         id: 'farmingMethodEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -603,12 +603,12 @@ class Permissions {
 
       farmingImport: {
         id: 'farmingImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       farmingCreate: {
         id: 'farmingCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -616,7 +616,7 @@ class Permissions {
       },
       farmingEdit: {
         id: 'farmingEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -643,12 +643,12 @@ class Permissions {
 
       irrigationImport: {
         id: 'irrigationImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       irrigationCreate: {
         id: 'irrigationCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -656,7 +656,7 @@ class Permissions {
       },
       irrigationEdit: {
         id: 'irrigationEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -683,12 +683,12 @@ class Permissions {
 
       weedImport: {
         id: 'weedImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       weedCreate: {
         id: 'weedCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -696,7 +696,7 @@ class Permissions {
       },
       weedEdit: {
         id: 'weedEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -723,12 +723,12 @@ class Permissions {
 
       herbicideImport: {
         id: 'herbicideImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       herbicideCreate: {
         id: 'herbicideCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -736,7 +736,7 @@ class Permissions {
       },
       herbicideEdit: {
         id: 'herbicideEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -763,12 +763,12 @@ class Permissions {
 
       insectImport: {
         id: 'insectImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       insectCreate: {
         id: 'insectCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -776,7 +776,7 @@ class Permissions {
       },
       insectEdit: {
         id: 'insectEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -803,12 +803,12 @@ class Permissions {
 
       insecticideImport: {
         id: 'insecticideImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       insecticideCreate: {
         id: 'insecticideCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -816,7 +816,7 @@ class Permissions {
       },
       insecticideEdit: {
         id: 'insecticideEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -843,12 +843,12 @@ class Permissions {
 
       pestImport: {
         id: 'pestImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       pestCreate: {
         id: 'pestCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -856,7 +856,7 @@ class Permissions {
       },
       pestEdit: {
         id: 'pestEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -883,12 +883,12 @@ class Permissions {
 
       pesticideImport: {
         id: 'pesticideImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       pesticideCreate: {
         id: 'pesticideCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -896,7 +896,7 @@ class Permissions {
       },
       pesticideEdit: {
         id: 'pesticideEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -923,12 +923,12 @@ class Permissions {
 
       soilImport: {
         id: 'soilImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       soilCreate: {
         id: 'soilCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -936,7 +936,7 @@ class Permissions {
       },
       soilEdit: {
         id: 'soilEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -963,12 +963,12 @@ class Permissions {
 
       diseaseImport: {
         id: 'diseaseImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       diseaseCreate: {
         id: 'diseaseCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -976,7 +976,7 @@ class Permissions {
       },
       diseaseEdit: {
         id: 'diseaseEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -1003,12 +1003,12 @@ class Permissions {
 
       fertilizerImport: {
         id: 'fertilizerImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       fertilizerCreate: {
         id: 'fertilizerCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -1016,7 +1016,7 @@ class Permissions {
       },
       fertilizerEdit: {
         id: 'fertilizerEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -1043,12 +1043,12 @@ class Permissions {
 
       organicFertilizerImport: {
         id: 'organicFertilizerImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       organicFertilizerCreate: {
         id: 'organicFertilizerCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -1056,7 +1056,7 @@ class Permissions {
       },
       organicFertilizerEdit: {
         id: 'organicFertilizerEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -1083,12 +1083,12 @@ class Permissions {
 
       harvestImport: {
         id: 'harvestImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       harvestCreate: {
         id: 'harvestCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -1096,7 +1096,7 @@ class Permissions {
       },
       harvestEdit: {
         id: 'harvestEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -1123,12 +1123,12 @@ class Permissions {
 
       rainwaterImport: {
         id: 'rainwaterImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       rainwaterCreate: {
         id: 'rainwaterCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -1136,7 +1136,7 @@ class Permissions {
       },
       rainwaterEdit: {
         id: 'rainwaterEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.farmer, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
