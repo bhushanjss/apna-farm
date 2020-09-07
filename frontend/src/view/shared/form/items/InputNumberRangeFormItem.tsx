@@ -91,13 +91,13 @@ function InputNumberRangeFormItem(props) {
     >
       <TextField
         fullWidth
-        label={`${label} ${i18n('common.start')}`}
+        label={label}
         variant="outlined"
         size="small"
         margin="normal"
         type="number"
-        id={`${name}Start`}
-        name={`${name}Start`}
+        id={name}
+        name={name}
         onChange={(event) =>
           handleStartChanged(event.target.value)
         }
@@ -110,42 +110,6 @@ function InputNumberRangeFormItem(props) {
         }}
         error={Boolean(errorMessage)}
         helperText={errorMessage || hint}
-        onBlur={(event) => {
-          props.onBlur && props.onBlur(event);
-        }}
-      />
-
-      <div
-        style={{
-          flexShrink: 1,
-          marginLeft: '8px',
-          marginRight: '8px',
-        }}
-      >
-        ~
-      </div>
-
-      <TextField
-        type="number"
-        label={`${label} ${i18n('common.end')}`}
-        id={`${name}End`}
-        name={`${name}End`}
-        required={required}
-        margin="normal"
-        fullWidth
-        variant="outlined"
-        size="small"
-        onChange={(event) =>
-          handleEndChanged(event.target.value)
-        }
-        value={endValue()}
-        placeholder={placeholder || undefined}
-        autoFocus={autoFocus || undefined}
-        autoComplete={autoComplete || undefined}
-        InputLabelProps={{
-          shrink: true,
-        }}
-        error={errorMessage}
         onBlur={(event) => {
           props.onBlur && props.onBlur(event);
         }}
