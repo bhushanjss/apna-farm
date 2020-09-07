@@ -128,7 +128,7 @@ class Permissions {
       },
       personCreate: {
         id: 'personCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -136,7 +136,7 @@ class Permissions {
       },
       personEdit: {
         id: 'personEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
