@@ -264,7 +264,7 @@ class Permissions {
       },
       farmerDestroy: {
         id: 'farmerDestroy',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.admin, roles.agent],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
