@@ -314,6 +314,15 @@ class FarmerRepository {
         };
       }
 
+      if (filter.createdById) {
+        where = {
+          ...where,
+          ['createdById']: SequelizeFilterUtils.uuid(
+            filter.createdById,
+          ),
+        };
+      }
+
       if (filter.area) {
         where = {
           ...where,
