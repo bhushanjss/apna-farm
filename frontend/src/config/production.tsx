@@ -1,8 +1,6 @@
 // Place the URL here with the /api suffix.
 // Ex.:`https://domain.com/api`;
-const backendUrl =  `${
-  process.env.APNA_FARM_BACKEND_URL
-}/api`;
+const backendUrl =  `https://api.gaiabharat.com/api`;
 
 /**
  * Frontend URL.
