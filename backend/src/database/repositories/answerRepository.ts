@@ -306,6 +306,15 @@ class AnswerRepository {
         };
       }
 
+      if (filter.createdById) {
+        where = {
+          ...where,
+          ['createdById']: SequelizeFilterUtils.uuid(
+            filter.createdById,
+          ),
+        };
+      }
+
       if (filter.createdAtRange) {
         const [start, end] = filter.createdAtRange;
 

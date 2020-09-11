@@ -365,6 +365,15 @@ class HarvestRepository {
         };
       }
 
+      if (filter.createdById) {
+        where = {
+          ...where,
+          ['createdById']: SequelizeFilterUtils.uuid(
+            filter.createdById,
+          ),
+        };
+      }
+
       if (filter.dateRange) {
         const [start, end] = filter.dateRange;
 

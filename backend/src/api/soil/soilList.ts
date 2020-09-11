@@ -5,9 +5,16 @@ import SoilService from '../../services/soilService';
 
 export default async (req, res, next) => {
   try {
-    new PermissionChecker(req).validateHas(
-      Permissions.values.soilRead,
-    );
+
+    const permissionChecker = new PermissionChecker(req);
+    permissionChecker.validateHas(Permissions.values.soilRead,);
+    let query = req.query;
+    await permissionChecker.currentUserRolesIds.some((role) => {
+      if(role !=='admin' && role !=='researcher') {
+        const currentUser = req.currentUser;
+        query.filter = {...query.filter, createdById: currentUser.id}
+      }
+    });
 
     const payload = await new SoilService(
       req,

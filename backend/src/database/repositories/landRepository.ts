@@ -324,6 +324,15 @@ class LandRepository {
         };
       }
 
+      if (filter.createdById) {
+        where = {
+          ...where,
+          ['createdById']: SequelizeFilterUtils.uuid(
+            filter.createdById,
+          ),
+        };
+      }
+
       if (
         filter.groundwaterAvailable === true ||
         filter.groundwaterAvailable === 'true' ||

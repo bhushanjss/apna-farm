@@ -324,6 +324,15 @@ class RainwaterRepository {
             filter.rainwaterHarvestingAllowed === 'true',
         };
       }
+      
+      if (filter.createdById) {
+        where = {
+          ...where,
+          ['createdById']: SequelizeFilterUtils.uuid(
+            filter.createdById,
+          ),
+        };
+      }
 
       if (filter.createdAtRange) {
         const [start, end] = filter.createdAtRange;
