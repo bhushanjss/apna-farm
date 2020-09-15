@@ -89,7 +89,7 @@ function PersonForm(props) {
       location: record.location,
       email: record.email,
       active: record.active,
-      label: record.label,
+      label: `${record.firstName},${record.lastName},${record.personId}`,
     };
   });
 
@@ -100,7 +100,9 @@ function PersonForm(props) {
   });
 
   const onSubmit = (values) => {
-    props.onSubmit(props.record?.id, values);
+    const valuesNew = {
+      ...values, label: `${values.firstName},${values.lastName},${values.personId}`} 
+    props.onSubmit(props.record?.id, valuesNew);
   };
 
   const onReset = () => {
@@ -188,13 +190,7 @@ function PersonForm(props) {
                 label={i18n('entities.person.fields.active')}
               />
             </Grid>
-            <Grid item lg={7} md={8} sm={12} xs={12}>
-              <InputFormItem
-                name="label"
-                label={i18n('entities.person.fields.label')}  
-                required={false}
-              />
-            </Grid>
+            
           </Grid>
           <FormButtons
             style={{
