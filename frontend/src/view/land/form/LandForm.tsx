@@ -84,7 +84,7 @@ function LandForm(props) {
       downpourRate: record.downpourRate,
       hailstorm: record.hailstorm,
       flood: record.flood,
-      label: record.label,
+      label: `${record.farmer}, ${record.location},${record.area}`,
     };
   });
 
@@ -95,7 +95,9 @@ function LandForm(props) {
   });
 
   const onSubmit = (values) => {
-    props.onSubmit(props.record?.id, values);
+    const valuesNew = {
+      ...values, label: `${values.farmer}, ${values.location},${values.area}`}
+    props.onSubmit(props.record?.id, valuesNew);
   };
 
   const onReset = () => {
@@ -183,13 +185,6 @@ function LandForm(props) {
               <SwitchFormItem
                 name="flood"
                 label={i18n('entities.land.fields.flood')}
-              />
-            </Grid>
-            <Grid item lg={7} md={8} sm={12} xs={12}>
-              <InputFormItem
-                name="label"
-                label={i18n('entities.land.fields.label')}  
-                required={false}
               />
             </Grid>
           </Grid>

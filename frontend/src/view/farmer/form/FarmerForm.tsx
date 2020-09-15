@@ -48,7 +48,7 @@ function FarmerForm(props) {
       agent: record.agent,
       area: record.area,
       lands: record.lands || [],
-      label: record.label,
+      label: record.person,
     };
   });
 
@@ -59,7 +59,8 @@ function FarmerForm(props) {
   });
 
   const onSubmit = (values) => {
-    props.onSubmit(props.record?.id, values);
+    const valuesNew = { ...values, label: values.person}
+    props.onSubmit(props.record?.id, valuesNew);
   };
 
   const onReset = () => {
@@ -105,13 +106,6 @@ function FarmerForm(props) {
                 required={false}
                 showCreate={!props.modal}
                 mode="multiple"
-              />
-            </Grid>
-            <Grid item lg={7} md={8} sm={12} xs={12}>
-              <InputFormItem
-                name="label"
-                label={i18n('entities.farmer.fields.label')}  
-                required={false}
               />
             </Grid>
           </Grid>

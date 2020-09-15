@@ -272,7 +272,7 @@ class Permissions {
       },
       farmerRead: {
         id: 'farmerRead',
-        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
+        allowedRoles: [roles.admin, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       farmerAutocomplete: {
@@ -392,7 +392,7 @@ class Permissions {
       },
       answerRead: {
         id: 'answerRead',
-        allowedRoles: [roles.admin, roles.farmer, roles.agent, roles.researcher],
+        allowedRoles: [roles.admin, roles.agent, roles.researcher],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       answerAutocomplete: {
