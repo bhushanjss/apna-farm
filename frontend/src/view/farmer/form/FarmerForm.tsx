@@ -35,9 +35,7 @@ const schema = yup.object().shape({
   ),
   lands: yupFormSchemas.relationToMany(
     i18n('entities.farmer.fields.lands'),
-    {
-      "required": true
-    },
+    {},
   ),
   label: yupFormSchemas.string(
     i18n('entities.farmer.fields.label'),
@@ -111,7 +109,7 @@ function FarmerForm(props) {
               <LandAutocompleteFormItem  
                 name="lands"
                 label={i18n('entities.farmer.fields.lands')}
-                required={true}
+                required={false}
                 showCreate={!props.modal}
                 mode="multiple"
               />

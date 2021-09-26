@@ -20,11 +20,15 @@ import FarmerAutocompleteFormItem from 'src/view/farmer/autocomplete/FarmerAutoc
 const schema = yup.object().shape({
   location: yupFormSchemas.relationToOne(
     i18n('entities.land.fields.location'),
-    {},
+    {
+      "required": true
+    },
   ),
   area: yupFormSchemas.decimal(
     i18n('entities.land.fields.area'),
-    {},
+    {
+      "required": true
+    },
   ),
   farmer: yupFormSchemas.relationToOne(
     i18n('entities.land.fields.farmer'),
@@ -84,7 +88,7 @@ function LandForm(props) {
       downpourRate: record.downpourRate,
       hailstorm: record.hailstorm,
       flood: record.flood,
-      label: `${record.farmer}, ${record.location},${record.area}`,
+      label: `${record.farmer}, ${record.location}, ${record.area}`,
     };
   });
 
@@ -96,7 +100,7 @@ function LandForm(props) {
 
   const onSubmit = (values) => {
     const valuesNew = {
-      ...values, label: `${values.farmer}, ${values.location},${values.area}`}
+      ...values, label: `${values.farmer}, ${values.location}, ${values.area}`}
     props.onSubmit(props.record?.id, valuesNew);
   };
 
@@ -117,7 +121,7 @@ function LandForm(props) {
               <LocationAutocompleteFormItem  
                 name="location"
                 label={i18n('entities.land.fields.location')}
-                required={false}
+                required={true}
                 showCreate={!props.modal}
               />
             </Grid>
@@ -125,7 +129,7 @@ function LandForm(props) {
               <InputFormItem
                 name="area"
                 label={i18n('entities.land.fields.area')}  
-                required={false}
+                required={true}
               />
             </Grid>
             <Grid item lg={7} md={8} sm={12} xs={12}>

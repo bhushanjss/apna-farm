@@ -55,7 +55,6 @@ const hi = {
             },
             fields: {
                 id: 'आईडी',
-                'personIdRange': 'व्यक्ति आईडी',
                 'personId': 'व्यक्ति आईडी',
                 'firstName': 'पहला नाम',
                 'lastName': 'उपनाम',
