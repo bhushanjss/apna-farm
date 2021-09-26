@@ -116,8 +116,8 @@ function PersonForm(props) {
   });
 
   const onSubmit = (values) => {
-    const {firstName, lastName, firstNameFather, lastNameFather, location } = values;
-    const recordValues = {...values, label: `${firstName} ${lastName} S/O  ${firstNameFather} ${lastNameFather} of ${location}` };
+    const {firstName, lastName, firstNameFather, lastNameFather } = values;
+    const recordValues = {...values, label: `${firstName} ${lastName} S/O  ${firstNameFather} ${lastNameFather}` };
     props.onSubmit(props.record?.id, recordValues);
   };
 
