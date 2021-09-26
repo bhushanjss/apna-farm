@@ -56,7 +56,7 @@ function LocationForm(props) {
       tehsil: record.tehsil,
       village: record.village,
       coords: record.coords,
-      label: record.label,
+      label: `${record.village},${record.district},${record.state}`,
     };
   });
 

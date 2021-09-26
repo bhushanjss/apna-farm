@@ -107,7 +107,7 @@ function PersonForm(props) {
       location: record.location,
       email: record.email,
       active: record.active,
-      label: record.label,
+      label: `${record.firstName},${record.lastName},${record.personId}`,
     };
   });
 

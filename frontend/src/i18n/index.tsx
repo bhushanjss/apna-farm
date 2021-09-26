@@ -21,6 +21,13 @@ const languages: {
     dateFns: null,
     dictionary: null,
   },
+  'hi': {
+    id: 'hi',
+    label: 'Hindi',
+    flag: '/images/flags/24/india-flag-icon-32.png',
+    dateFns: null,
+    dictionary: null,
+  },
   'pt-BR': {
     id: 'pt-BR',
     label: 'Português',
@@ -37,6 +44,10 @@ export async function init() {
 
   if (currentLanguageCode === 'en') {
     await initEn();
+  }
+
+  if (currentLanguageCode === 'hi') {
+    await initHi();
   }
 
   if (currentLanguageCode === 'pt-BR') {
@@ -60,6 +71,30 @@ async function initPtBr() {
   ).default;
 
   moment.locale('pt-BR', momentLocale);
+
+  if (language.dictionary.validation) {
+    setYupLocale(language.dictionary.validation);
+  }
+
+  return language;
+}
+
+async function initHi() {
+  const language = languages['hi'];
+
+  // @ts-ignore
+  const momentLocale = (await import('moment/locale/hi'))
+    .default;
+
+  language.dateFns = (
+    await import('date-fns/locale/hi')
+  ).default;
+
+  language.dictionary = (
+    await import('src/i18n/hi')
+  ).default;
+
+  moment.locale('hi', momentLocale);
 
   if (language.dictionary.validation) {
     setYupLocale(language.dictionary.validation);

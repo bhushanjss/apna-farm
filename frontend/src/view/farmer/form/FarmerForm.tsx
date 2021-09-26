@@ -54,7 +54,7 @@ function FarmerForm(props) {
       agent: record.agent,
       area: record.area,
       lands: record.lands || [],
-      label: record.label,
+      label: record.person,
     };
   });
 
