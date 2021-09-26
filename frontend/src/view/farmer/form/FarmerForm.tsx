@@ -19,7 +19,9 @@ import LandAutocompleteFormItem from 'src/view/land/autocomplete/LandAutocomplet
 const schema = yup.object().shape({
   person: yupFormSchemas.relationToOne(
     i18n('entities.farmer.fields.person'),
-    {},
+    {
+      "required": true
+    },
   ),
   agent: yupFormSchemas.relationToOne(
     i18n('entities.farmer.fields.agent'),
@@ -27,11 +29,15 @@ const schema = yup.object().shape({
   ),
   area: yupFormSchemas.string(
     i18n('entities.farmer.fields.area'),
-    {},
+    {
+      "required": true
+    },
   ),
   lands: yupFormSchemas.relationToMany(
     i18n('entities.farmer.fields.lands'),
-    {},
+    {
+      "required": true
+    },
   ),
   label: yupFormSchemas.string(
     i18n('entities.farmer.fields.label'),
@@ -59,7 +65,10 @@ function FarmerForm(props) {
   });
 
   const onSubmit = (values) => {
-    props.onSubmit(props.record?.id, values);
+    const { person } = values;
+    const personAr = person.split(";");
+    const recordValues = {...values, person: personAr[0], label: personAr[1]};
+    props.onSubmit(props.record?.id, recordValues);
   };
 
   const onReset = () => {
@@ -79,7 +88,7 @@ function FarmerForm(props) {
               <PersonAutocompleteFormItem  
                 name="person"
                 label={i18n('entities.farmer.fields.person')}
-                required={false}
+                required={true}
                 showCreate={!props.modal}
               />
             </Grid>
@@ -95,23 +104,16 @@ function FarmerForm(props) {
               <InputFormItem
                 name="area"
                 label={i18n('entities.farmer.fields.area')}  
-                required={false}
+                required={true}
               />
             </Grid>
             <Grid item lg={7} md={8} sm={12} xs={12}>
               <LandAutocompleteFormItem  
                 name="lands"
                 label={i18n('entities.farmer.fields.lands')}
-                required={false}
+                required={true}
                 showCreate={!props.modal}
                 mode="multiple"
-              />
-            </Grid>
-            <Grid item lg={7} md={8} sm={12} xs={12}>
-              <InputFormItem
-                name="label"
-                label={i18n('entities.farmer.fields.label')}  
-                required={false}
               />
             </Grid>
           </Grid>

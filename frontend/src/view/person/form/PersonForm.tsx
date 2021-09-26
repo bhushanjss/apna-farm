@@ -73,7 +73,9 @@ const schema = yup.object().shape({
   ),
   location: yupFormSchemas.relationToOne(
     i18n('entities.person.fields.location'),
-    {},
+    {
+      "required": true
+    },
   ),
   email: yupFormSchemas.string(
     i18n('entities.person.fields.email'),
@@ -197,7 +199,7 @@ function PersonForm(props) {
               <LocationAutocompleteFormItem  
                 name="location"
                 label={i18n('entities.person.fields.location')}
-                required={false}
+                required={true}
                 showCreate={!props.modal}
               />
             </Grid>
