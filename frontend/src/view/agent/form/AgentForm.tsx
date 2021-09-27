@@ -54,7 +54,10 @@ function AgentForm(props) {
   });
 
   const onSubmit = (values) => {
-    props.onSubmit(props.record?.id, values);
+    const { person } = values;
+    const personAr = person.split(";");
+    const recordValues = {...values, person: personAr[0], label: personAr[1]};
+    props.onSubmit(props.record?.id, recordValues);
   };
 
   const onReset = () => {
@@ -94,13 +97,6 @@ function AgentForm(props) {
                 required={false}
                 showCreate={!props.modal}
                 mode="multiple"
-              />
-            </Grid>
-            <Grid item lg={7} md={8} sm={12} xs={12}>
-              <InputFormItem
-                name="label"
-                label={i18n('entities.agent.fields.label')}  
-                required={false}
               />
             </Grid>
           </Grid>

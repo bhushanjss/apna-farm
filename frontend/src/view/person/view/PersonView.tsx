@@ -12,7 +12,7 @@ function PersonView(props) {
       <div>
         <TextViewItem
           label={i18n('entities.person.fields.personId')}
-          value={record.personId}
+          value={record.id}
         />
 
         <TextViewItem

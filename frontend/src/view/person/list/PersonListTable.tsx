@@ -243,7 +243,7 @@ function PersonListTable(props) {
                       size="small"
                     />
                   </TableCell>
-                <TableCell align="right">{row.personId}</TableCell>
+                <TableCell align="right">{row.id}</TableCell>
                 <TableCell>{row.firstName}</TableCell>
                 <TableCell>{row.lastName}</TableCell>
                 <TableCell>

@@ -32,7 +32,9 @@ const schema = yup.object().shape({
   ),
   village: yupFormSchemas.string(
     i18n('entities.location.fields.village'),
-    {},
+    {
+      "required": true
+    },
   ),
   coords: yupFormSchemas.string(
     i18n('entities.location.fields.coords'),
@@ -54,7 +56,7 @@ function LocationForm(props) {
       tehsil: record.tehsil,
       village: record.village,
       coords: record.coords,
-      label: record.label,
+      label: `${record.village},${record.district},${record.state}`,
     };
   });
 
@@ -65,7 +67,14 @@ function LocationForm(props) {
   });
 
   const onSubmit = (values) => {
-    props.onSubmit(props.record?.id, values);
+    const { state, district, tehsil, village } = values;
+    let label = village;
+    if(tehsil) {
+      label = `${label}, ${tehsil}`;
+    }
+    label = `${label}, ${district}, ${state}`;
+    const recordValues = {...values, label};
+    props.onSubmit(props.record?.id, recordValues);
   };
 
   const onReset = () => {
@@ -107,20 +116,13 @@ function LocationForm(props) {
               <InputFormItem
                 name="village"
                 label={i18n('entities.location.fields.village')}  
-                required={false}
+                required={true}
               />
             </Grid>
             <Grid item lg={7} md={8} sm={12} xs={12}>
               <InputFormItem
                 name="coords"
                 label={i18n('entities.location.fields.coords')}  
-                required={false}
-              />
-            </Grid>
-            <Grid item lg={7} md={8} sm={12} xs={12}>
-              <InputFormItem
-                name="label"
-                label={i18n('entities.location.fields.label')}  
                 required={false}
               />
             </Grid>

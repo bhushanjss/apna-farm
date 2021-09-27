@@ -55,10 +55,11 @@ const en = {
         },
         fields: {
           id: 'Id',
-          'personIdRange': 'PersonId',
           'personId': 'PersonId',
           'firstName': 'First Name',
           'lastName': 'Last Name',
+          'firstNameFather': 'Father\'s First Name',
+          'lastNameFather': 'Father\'s Last Name',
           'gender': 'Gender',
           'birthdateRange': 'Birthdate',
           'birthdate': 'Birthdate',
@@ -120,7 +121,7 @@ const en = {
           'state': 'State',
           'district': 'District',
           'tehsil': 'Tehsil',
-          'village': 'Village',
+          'village': 'Village/City',
           'coords': 'Coords',
           'label': 'Label',
           createdAt: 'Created at',
@@ -172,7 +173,7 @@ const en = {
           id: 'Id',
           'location': 'Location',
           'areaRange': 'Area',
-          'area': 'Area',
+          'area': 'Area (Ha)',
           'farmer': 'Farmer',
           'groundwaterAvailable': 'Groundwater Available',
           'groundwaterDepthRange': 'Groundwater Depth',
@@ -184,12 +185,17 @@ const en = {
           'hailstorm': 'Hailstorm',
           'flood': 'Flood',
           'label': 'Label',
+          'ownership': 'Ownership',
           createdAt: 'Created at',
           updatedAt: 'Updated at',
           createdAtRange: 'Created at',
         },
         enumerators: {
-
+          "ownership": {
+            "own": "Own",
+            "rent": "Rent",
+            "unoccupied": "Unoccupied"
+          }          
         },
         new: {
           title: 'New Land',
@@ -233,7 +239,7 @@ const en = {
           id: 'Id',
           'person': 'Person',
           'agent': 'Agent',
-          'area': 'Area',
+          'area': 'Total Area (Ha)',
           'lands': 'Lands',
           'label': 'Label',
           createdAt: 'Created at',
@@ -1610,6 +1616,8 @@ const en = {
       fullName: 'Name',
       firstName: 'First Name',
       lastName: 'Last Name',
+      firstNameFather: 'Father\'s First Name',
+      lastNameFather: 'Father\'s Last Name',
       status: 'Status',
       phoneNumber: 'Phone Number',
       role: 'Role',
