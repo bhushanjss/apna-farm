@@ -21,7 +21,7 @@
     "enzyme-adapter-react-16": "1.15.2",
     "file-saver": "2.0.2",
     "filesize": "6.1.0",
-    "lodash": "4.17.19",
+    "lodash": "4.17.21",
     "md5": "2.2.1",
     "notistack": "0.9.17",
     "nprogress": "0.2.0",
