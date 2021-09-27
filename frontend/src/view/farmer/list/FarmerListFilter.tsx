@@ -59,7 +59,13 @@ function FarmerListFilter(props) {
   }, [dispatch]);
 
   const onSubmit = (values) => {
-    dispatch(actions.doFetch(values));
+    const { person } = values;
+    let recordValues = values;
+    if(person) {
+      const personAr = person.split(";");   
+      recordValues = {...values, person: personAr[0]};
+    }  
+    dispatch(actions.doFetch(recordValues));
   };
 
   const onReset = () => {

@@ -55,7 +55,6 @@ const ptBR = {
         },
         fields: {
           id: 'Id',
-          'personIdRange': 'PersonId',
           'personId': 'PersonId',
           'firstName': 'First Name',
           'lastName': 'Last Name',

@@ -16,15 +16,21 @@ import InputNumberFormItem from 'src/view/shared/form/items/InputNumberFormItem'
 import SwitchFormItem from 'src/view/shared/form/items/SwitchFormItem';
 import LocationAutocompleteFormItem from 'src/view/location/autocomplete/LocationAutocompleteFormItem';
 import FarmerAutocompleteFormItem from 'src/view/farmer/autocomplete/FarmerAutocompleteFormItem';
+import SelectFormItem from 'src/view/shared/form/items/SelectFormItem';
+import landEnumerators from 'src/modules/land/landEnumerators';
 
 const schema = yup.object().shape({
   location: yupFormSchemas.relationToOne(
     i18n('entities.land.fields.location'),
-    {},
+    {
+      "required": true
+    },
   ),
   area: yupFormSchemas.decimal(
     i18n('entities.land.fields.area'),
-    {},
+    {
+      "required": true
+    },
   ),
   farmer: yupFormSchemas.relationToOne(
     i18n('entities.land.fields.farmer'),
@@ -66,6 +72,12 @@ const schema = yup.object().shape({
     i18n('entities.land.fields.label'),
     {},
   ),
+  ownership: yupFormSchemas.enumerator(
+    i18n('entities.land.fields.ownership'),
+    {
+      "options": landEnumerators.ownership
+    },
+  ),
 });
 
 function LandForm(props) {
@@ -84,7 +96,7 @@ function LandForm(props) {
       downpourRate: record.downpourRate,
       hailstorm: record.hailstorm,
       flood: record.flood,
-      label: `${record.farmer}, ${record.location},${record.area}`,
+      label: `${record.farmer}, ${record.location}, ${record.area}`,
     };
   });
 
@@ -96,7 +108,7 @@ function LandForm(props) {
 
   const onSubmit = (values) => {
     const valuesNew = {
-      ...values, label: `${values.farmer}, ${values.location},${values.area}`}
+      ...values, label: `${values.farmer}, ${values.location}, ${values.area}`}
     props.onSubmit(props.record?.id, valuesNew);
   };
 
@@ -117,7 +129,7 @@ function LandForm(props) {
               <LocationAutocompleteFormItem  
                 name="location"
                 label={i18n('entities.land.fields.location')}
-                required={false}
+                required={true}
                 showCreate={!props.modal}
               />
             </Grid>
@@ -125,7 +137,7 @@ function LandForm(props) {
               <InputFormItem
                 name="area"
                 label={i18n('entities.land.fields.area')}  
-                required={false}
+                required={true}
               />
             </Grid>
             <Grid item lg={7} md={8} sm={12} xs={12}>
@@ -185,6 +197,21 @@ function LandForm(props) {
               <SwitchFormItem
                 name="flood"
                 label={i18n('entities.land.fields.flood')}
+              />
+            </Grid>
+            <Grid item lg={7} md={8} sm={12} xs={12}>
+              <SelectFormItem
+                name="ownership"
+                label={i18n('entities.land.fields.ownership')}
+                options={landEnumerators.ownership.map(
+                  (value) => ({
+                    value,
+                    label: i18n(
+                      `entities.land.enumerators.ownership.${value}`,
+                    ),
+                  }),
+                )}
+                required={false}
               />
             </Grid>
           </Grid>

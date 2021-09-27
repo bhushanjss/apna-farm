@@ -12,7 +12,6 @@ import * as yup from 'yup';
 import yupFormSchemas from 'src/modules/shared/yup/yupFormSchemas';
 import { yupResolver } from '@hookform/resolvers';
 import InputFormItem from 'src/view/shared/form/items/InputFormItem';
-import InputNumberFormItem from 'src/view/shared/form/items/InputNumberFormItem';
 import SwitchFormItem from 'src/view/shared/form/items/SwitchFormItem';
 import RadioFormItem from 'src/view/shared/form/items/RadioFormItem';
 import personEnumerators from 'src/modules/person/personEnumerators';
@@ -24,7 +23,7 @@ const schema = yup.object().shape({
   personId: yupFormSchemas.integer(
     i18n('entities.person.fields.personId'),
     {},
-  ),
+  ).default(0),
   firstName: yupFormSchemas.string(
     i18n('entities.person.fields.firstName'),
     {
@@ -35,6 +34,21 @@ const schema = yup.object().shape({
   ),
   lastName: yupFormSchemas.string(
     i18n('entities.person.fields.lastName'),
+    {
+      "min": 2,
+      "max": 255
+    },
+  ),
+  firstNameFather: yupFormSchemas.string(
+    i18n('entities.person.fields.firstNameFather'),
+    {
+      "min": 2,
+      "max": 255,
+      "required": true
+    },
+  ),
+  lastNameFather: yupFormSchemas.string(
+    i18n('entities.person.fields.lastNameFather'),
     {
       "min": 2,
       "max": 255
@@ -59,7 +73,9 @@ const schema = yup.object().shape({
   ),
   location: yupFormSchemas.relationToOne(
     i18n('entities.person.fields.location'),
-    {},
+    {
+      "required": true
+    },
   ),
   email: yupFormSchemas.string(
     i18n('entities.person.fields.email'),
@@ -83,6 +99,8 @@ function PersonForm(props) {
       personId: record.personId,
       firstName: record.firstName,
       lastName: record.lastName,
+      firstNameFather: record.firstNameFather,
+      lastNameFather: record.lastNameFather,
       gender: record.gender,
       birthdate: record.birthdate ? moment(record.birthdate, 'YYYY-MM-DD') : null,
       phoneNumber: record.phoneNumber,
@@ -100,9 +118,9 @@ function PersonForm(props) {
   });
 
   const onSubmit = (values) => {
-    const valuesNew = {
-      ...values, label: `${values.firstName},${values.lastName},${values.personId}`} 
-    props.onSubmit(props.record?.id, valuesNew);
+    const {firstName, lastName, firstNameFather, lastNameFather } = values;
+    const recordValues = {...values, label: `${firstName} ${lastName} S/O  ${firstNameFather} ${lastNameFather}` };
+    props.onSubmit(props.record?.id, recordValues);
   };
 
   const onReset = () => {
@@ -119,24 +137,32 @@ function PersonForm(props) {
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <Grid spacing={2} container>
             <Grid item lg={7} md={8} sm={12} xs={12}>
-              <InputNumberFormItem
-                name="personId"
-                label={i18n('entities.person.fields.personId')}  
-                required={false}
-              autoFocus
-              />
-            </Grid>
-            <Grid item lg={7} md={8} sm={12} xs={12}>
               <InputFormItem
                 name="firstName"
                 label={i18n('entities.person.fields.firstName')}  
                 required={true}
+                autoFocus
               />
             </Grid>
             <Grid item lg={7} md={8} sm={12} xs={12}>
               <InputFormItem
                 name="lastName"
                 label={i18n('entities.person.fields.lastName')}  
+                required={false}
+              />
+            </Grid>
+            <Grid item lg={7} md={8} sm={12} xs={12}>
+              <InputFormItem
+                name="firstNameFather"
+                label={i18n('entities.person.fields.firstNameFather')}  
+                required={true}
+                autoFocus
+              />
+            </Grid>
+            <Grid item lg={7} md={8} sm={12} xs={12}>
+              <InputFormItem
+                name="lastNameFather"
+                label={i18n('entities.person.fields.lastNameFather')}  
                 required={false}
               />
             </Grid>
@@ -173,7 +199,7 @@ function PersonForm(props) {
               <LocationAutocompleteFormItem  
                 name="location"
                 label={i18n('entities.person.fields.location')}
-                required={false}
+                required={true}
                 showCreate={!props.modal}
               />
             </Grid>
@@ -190,7 +216,6 @@ function PersonForm(props) {
                 label={i18n('entities.person.fields.active')}
               />
             </Grid>
-            
           </Grid>
           <FormButtons
             style={{

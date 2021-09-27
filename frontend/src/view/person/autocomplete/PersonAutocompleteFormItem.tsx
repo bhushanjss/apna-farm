@@ -57,7 +57,7 @@ function PersonAutocompleteFormItem(props) {
 
       return {
         key: value,
-        value,
+        value: `${value};${label}`,
         label,
       };
     },

@@ -14,14 +14,13 @@ import FilterWrapper, {
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers';
 import InputFormItem from 'src/view/shared/form/items/InputFormItem';
-import InputNumberRangeFormItem from 'src/view/shared/form/items/InputNumberRangeFormItem';
 import SelectFormItem from 'src/view/shared/form/items/SelectFormItem';
 import personEnumerators from 'src/modules/person/personEnumerators';
 import LocationAutocompleteFormItem from 'src/view/location/autocomplete/LocationAutocompleteFormItem';
 
 const schema = yup.object().shape({
-  personIdRange: yupFilterSchemas.integerRange(
-    i18n('entities.person.fields.personIdRange'),
+  personId: yupFilterSchemas.integerRange(
+    i18n('entities.person.fields.personId'),
   ),
   firstName: yupFilterSchemas.string(
     i18n('entities.person.fields.firstName'),
@@ -55,7 +54,7 @@ function PersonListFilter(props) {
 
   const [initialValues] = useState(() => {
     return {
-      personIdRange: [],
+      personId: undefined,
       firstName: undefined,
       lastName: undefined,
       gender: undefined,
@@ -97,9 +96,9 @@ function PersonListFilter(props) {
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
             <Grid item lg={6} xs={12}>
-              <InputNumberRangeFormItem
-                name="personIdRange"
-                label={i18n('entities.person.fields.personIdRange')}      
+              <InputFormItem
+                name="personId"
+                label={i18n('entities.person.fields.personId')}      
               />
             </Grid>
             <Grid item lg={6} xs={12}>
