@@ -185,12 +185,17 @@ const en = {
           'hailstorm': 'Hailstorm',
           'flood': 'Flood',
           'label': 'Label',
+          'ownership': 'Ownership',
           createdAt: 'Created at',
           updatedAt: 'Updated at',
           createdAtRange: 'Created at',
         },
         enumerators: {
-
+          "ownership": {
+            "own": "Own",
+            "rent": "Rent",
+            "unoccupied": "Unoccupied"
+          }          
         },
         new: {
           title: 'New Land',

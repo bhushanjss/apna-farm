@@ -16,6 +16,8 @@ import InputNumberFormItem from 'src/view/shared/form/items/InputNumberFormItem'
 import SwitchFormItem from 'src/view/shared/form/items/SwitchFormItem';
 import LocationAutocompleteFormItem from 'src/view/location/autocomplete/LocationAutocompleteFormItem';
 import FarmerAutocompleteFormItem from 'src/view/farmer/autocomplete/FarmerAutocompleteFormItem';
+import SelectFormItem from 'src/view/shared/form/items/SelectFormItem';
+import landEnumerators from 'src/modules/land/landEnumerators';
 
 const schema = yup.object().shape({
   location: yupFormSchemas.relationToOne(
@@ -69,6 +71,12 @@ const schema = yup.object().shape({
   label: yupFormSchemas.string(
     i18n('entities.land.fields.label'),
     {},
+  ),
+  ownership: yupFormSchemas.enumerator(
+    i18n('entities.land.fields.ownership'),
+    {
+      "options": landEnumerators.ownership
+    },
   ),
 });
 
@@ -189,6 +197,21 @@ function LandForm(props) {
               <SwitchFormItem
                 name="flood"
                 label={i18n('entities.land.fields.flood')}
+              />
+            </Grid>
+            <Grid item lg={7} md={8} sm={12} xs={12}>
+              <SelectFormItem
+                name="ownership"
+                label={i18n('entities.land.fields.ownership')}
+                options={landEnumerators.ownership.map(
+                  (value) => ({
+                    value,
+                    label: i18n(
+                      `entities.land.enumerators.ownership.${value}`,
+                    ),
+                  }),
+                )}
+                required={false}
               />
             </Grid>
           </Grid>
