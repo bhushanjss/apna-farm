@@ -58,7 +58,7 @@ function SwitchFormItem(props) {
       <Switch
         id={name}
         name={name}
-        checked={watch(name) || true}
+        checked={watch(name) || false}
         onChange={(e) => {
           setValue(name, e.target.checked, { shouldValidate: true });
           props.onChange &&
